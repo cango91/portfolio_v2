@@ -1,12 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
+import { useTheme } from './contexts/ThemeContext';
 
-function App() {
+export default function App() {
+  const {theme} = useTheme();
   return (
-    <div className="App">
+    <div className={`app ${theme === 'dark' ? "dark-theme" : ""}`}>
 
     </div>
   );
 }
-
-export default App;
