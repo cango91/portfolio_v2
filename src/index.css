@@ -27,6 +27,10 @@
   --accent-subtle: #a5d1ff;
 }
 
+*{
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

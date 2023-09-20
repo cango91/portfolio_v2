@@ -17,7 +17,7 @@ export function ThemeProvider({ children }) {
         // first check if the user has explicitly set a theme
         const preference = localStorage.getItem('theme');
         if (preference) {
-            setTheme(preference);
+            setTheme(preference.toLowerCase());
         } else {
             // otherwise check the system preference, add listener for dynamic systems
             mediaQuery.current = window.matchMedia('(prefers-color-scheme: dark)');
@@ -33,7 +33,7 @@ export function ThemeProvider({ children }) {
 
     useEffect(() => {
         // Update the class list of the body based on the current theme
-        // Since <body> element is not in React's scope, we'll manipulate it directly
+        // Since <body> element is not in React's scope, we'll manipulate it directly, sorry React
         if (theme === 'dark') {
             document.body.classList.add('dark-theme');
         } else {
