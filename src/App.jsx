@@ -1,6 +1,7 @@
 import './App.css';
 import About from './components/About/About';
 import Header from './components/Header/Header';
+import TechStack from './components/TechStack/TechStack';
 import { useTheme } from './contexts/ThemeContext';
 
 export default function App() {
@@ -14,7 +15,7 @@ export default function App() {
         </section>
         
         <section id="TechStack">
-          <h2 tabIndex={1}>Tech Stack</h2>
+          <TechStack />
         </section>
         <p>Nobis odio placeat molestiae beatae animi fugiat eligendi, mollitia distinctio asperiores officia porro dolores pariatur nam vero deserunt sunt magnam sapiente. Laboriosam reprehenderit iure enim laudantium placeat repellat rerum similique?</p>
         <p>Perferendis, nam magnam obcaecati voluptatibus quasi aspernatur, hic modi eligendi quas suscipit quibusdam vel amet veniam saepe illum repellendus impedit omnis, reprehenderit expedita doloremque quos atque cupiditate explicabo accusamus. Vel!</p>
