@@ -20,10 +20,12 @@ export default function About() {
                         Outside of my professional pursuits, I find balance and inspiration through sailing, snowboarding and bouldering. These activities not only challenge me physically but mentally as well, reflecting my approach to problem-solving in software development. Just like setting a course on open water or finding the next grip on a climb, I approach each project with <b>precision, creativity, and a drive to reach new heights</b>.
                     </p>
                 </div>
-                <div className="about__links">
-                    <a  tabIndex={1} target='_blank' href="can-gologlu-resume.pdf" className="link">Download Resumé</a>
-                    <a  tabIndex={1} target='_blank' rel='noreferrer noopener' href="https://github.com/cango91" className="link">GitHub</a>
-                    <a  tabIndex={1} target='_blank' rel='noreferrer noopener' href="https://www.linkedin.com/in/can-gologlu/" className="link">LinkedIn</a>
+                <div className="about__links__container">
+                    <div className="about__links">
+                        <a tabIndex={1} target='_blank' href="can-gologlu-resume.pdf" className="link">Download Resumé</a>
+                        <a tabIndex={1} target='_blank' rel='noreferrer noopener' href="https://github.com/cango91" className="link">GitHub</a>
+                        <a tabIndex={1} target='_blank' rel='noreferrer noopener' href="https://www.linkedin.com/in/can-gologlu/" className="link">LinkedIn</a>
+                    </div>
                 </div>
             </div>
         </div>
