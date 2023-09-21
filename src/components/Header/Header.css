@@ -1,0 +1,21 @@
+.header-top{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--secondary-bg);
+    padding: 1rem;
+    align-items: center;
+}
+
+.header__name{
+    color: var(--primary-text);
+    font-weight: 700;
+    font-size: larger;
+}
+
+.header__settings{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 50%;
+    min-width: 25%;
+}

@@ -1,3 +1,4 @@
+@import url('https://fonts.cdnfonts.com/css/open-dyslexic');
 /* Light Theme */
 :root {
   /* A light gray for the background */
@@ -27,7 +28,7 @@
   --accent-subtle: #a5d1ff;
 }
 
-*{
+* {
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 
@@ -41,7 +42,15 @@ body {
   background-color: var(--primary-bg);
 }
 
+.dyslexic-mode{
+  font-family: 'Open-Dyslexic', sans-serif !important;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+*:focus{
+  outline: 3px solid var(--accent-mild);
 }

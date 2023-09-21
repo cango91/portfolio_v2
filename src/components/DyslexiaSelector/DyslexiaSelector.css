@@ -1,0 +1,58 @@
+.dyslexia-selector {
+    display: flex;
+}
+
+/* .dyslexia-selector__label{
+    font-family: 'Open-Dyslexic', sans-serif;
+    color: var(--primary-text);
+    margin-left: 0.5rem;
+} */
+
+.hidden-checkbox {
+    display: none;
+}
+
+.dyslexia-selector__label {
+    font-family: 'Open-Dyslexic', sans-serif;
+    color: var(--primary-text);
+    margin-left: 0.25rem;
+    position: relative;
+    cursor: pointer;
+    padding-right: calc(20px + 1rem);
+    text-align: right;
+}
+
+.checkmark {
+    position: absolute;
+    top: calc(50% - 10px);
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-bg);
+    border-radius: 4px;
+    border: 1px solid var(--accent-subtle);
+}
+
+.hidden-checkbox:checked+.checkmark {
+    background-color: var(--accent-mild);
+}
+
+.checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.hidden-checkbox:checked+.checkmark::after {
+    display: block;
+}
+
+.hidden-checkbox:checked+.checkmark::after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid var(--secondary-bg);
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}

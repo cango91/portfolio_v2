@@ -10,6 +10,7 @@ export function useTheme() {
 
 export function ThemeProvider({ children }) {
     const [theme, setTheme] = useState('light');
+    const [dyslexicMode, setDyslexicMode] = useState('off');
     const mediaQuery = useRef(null);
     const changeTheme = (e) => setTheme(e.matches ? 'dark' : 'light');
 
@@ -26,6 +27,11 @@ export function ThemeProvider({ children }) {
             // Listener for changes
             mediaQuery.current.addEventListener('change', changeTheme);
         }
+
+        // Check for dyslexic font preference
+        const dyslexicPref = localStorage.getItem('dyslexic-mode') || 'off';
+        setDyslexicMode(dyslexicPref);
+
         return () => {
             if (mediaQuery.current) mediaQuery.current.removeEventListener('change', changeTheme);
         }
@@ -41,6 +47,16 @@ export function ThemeProvider({ children }) {
         }
     }, [theme]);
 
+    useEffect(()=>{
+        if(dyslexicMode==='on'){
+            document.body.classList.add('dyslexic-mode');
+        }else{
+            document.body.classList.remove('dyslexic-mode');
+        }
+    },[dyslexicMode]);
+
+
+
     function setThemePreference(theme) {
         // set user preference in local storage to persist between visits
         localStorage.setItem('theme', theme);
@@ -52,9 +68,16 @@ export function ThemeProvider({ children }) {
         }
     }
 
+    function setDyslexicModePreference(preference){
+        localStorage.setItem('dyslexic-mode',preference);
+        setDyslexicMode(preference);
+    }
+
     const value = {
         theme,
         setThemePreference,
+        dyslexicMode,
+        setDyslexicModePreference,
     };
     return (
         <ThemeContext.Provider value={value}>
