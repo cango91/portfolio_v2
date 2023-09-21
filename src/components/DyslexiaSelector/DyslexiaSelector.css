@@ -2,12 +2,6 @@
     display: flex;
 }
 
-/* .dyslexia-selector__label{
-    font-family: 'Open-Dyslexic', sans-serif;
-    color: var(--primary-text);
-    margin-left: 0.5rem;
-} */
-
 .hidden-checkbox {
     display: none;
 }
