@@ -6,7 +6,7 @@ export default function About() {
             <h2><span role='heading' aria-level="2" tabIndex={1}>About</span></h2>
             <div className="about">
                 <div className="about__statement">
-                    <img src="headshot.webp" alt="headshot of the developer" className='headshot' />
+                    <img tabIndex={1} src="headshot.webp" alt="headshot of the developer" className='headshot' />
                     <p tabIndex={1} className='text-center'>
                         Hi! <span className="wave">🖐🏼</span>
                     </p>

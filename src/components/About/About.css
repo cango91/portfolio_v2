@@ -28,6 +28,8 @@
     margin: 10px;
     border: 3px solid var(--accent-subtle);
     shape-outside: margin-box;
+    z-index: 1;
+    position: relative;
 }
 
 .about__links {
