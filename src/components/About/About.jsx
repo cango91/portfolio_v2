@@ -1,12 +1,14 @@
+import { useTheme } from '../../contexts/ThemeContext';
 import './About.css';
 
 export default function About() {
+    const {theme} = useTheme();
     return (
         <div className='section'>
             <h2><span role='heading' aria-level="2" tabIndex={1}>About</span></h2>
             <div className="about">
                 <div className="about__statement">
-                    <img tabIndex={1} src="headshot.webp" alt="headshot of the developer" className='headshot' />
+                    <img tabIndex={1} src="headshot.webp" alt="headshot of the developer" className={`headshot ${theme==='dark' ? 'dark-theme' : ''}`} />
                     <p tabIndex={1} className='text-center'>
                         Hi! <span aria-label='animated waving hand' className="wave">🖐🏼</span>
                     </p>
