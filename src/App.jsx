@@ -1,6 +1,6 @@
 import './App.css';
+import About from './components/About/About';
 import Header from './components/Header/Header';
-import ThemeSelector from './components/ThemeSelector/ThemeSelector';
 import { useTheme } from './contexts/ThemeContext';
 
 export default function App() {
@@ -10,7 +10,7 @@ export default function App() {
       <Header />
       <main>
         <section id="About">
-
+          <About />
         </section>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dignissimos perspiciatis ullam, exercitationem eos cumque culpa at odit qui quam iure perferendis possimus tempore ab, sapiente, adipisci molestiae. Minus, exercitationem.</p>
         <p>Esse explicabo facere, est ipsam similique quo harum aliquam at quas quod, unde recusandae fugiat modi necessitatibus maxime dolor quam accusamus asperiores veritatis repudiandae doloribus soluta. Eos architecto corrupti facilis!</p>
@@ -46,7 +46,7 @@ export default function App() {
         <p>Odio, labore! Mollitia ex dolore ab obcaecati, earum quo perspiciatis vitae, incidunt quae, assumenda quas sed. Labore temporibus placeat doloremque voluptate, sunt maxime! Totam magnam quasi eius, beatae architecto hic.</p>
         <p>Ab odio reprehenderit itaque expedita quod voluptatibus illo, reiciendis et animi ut, nesciunt tempora corrupti quisquam consequuntur error ea vero numquam optio, nostrum quas dicta saepe? Quas cumque eum vel?</p>
         <section id="TechStack">
-          
+          <h2 tabIndex={1}>Tech Stack</h2>
         </section>
         <p>Nobis odio placeat molestiae beatae animi fugiat eligendi, mollitia distinctio asperiores officia porro dolores pariatur nam vero deserunt sunt magnam sapiente. Laboriosam reprehenderit iure enim laudantium placeat repellat rerum similique?</p>
         <p>Perferendis, nam magnam obcaecati voluptatibus quasi aspernatur, hic modi eligendi quas suscipit quibusdam vel amet veniam saepe illum repellendus impedit omnis, reprehenderit expedita doloremque quos atque cupiditate explicabo accusamus. Vel!</p>

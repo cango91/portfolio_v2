@@ -56,3 +56,34 @@ code {
 *:focus {
   outline: 3px solid var(--accent-mild);
 }
+
+
+*{
+  color: var(--primary-text);
+}
+
+section{
+  padding: 55px 0 0 0;
+}
+
+.section{
+  text-align: left;
+  padding: 0 20px;
+  margin-bottom: 10px;
+}
+.section h2 {
+  text-align: left;
+  border-bottom: 1px solid var(--accent-subtle);
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+  padding-left: 10%;
+}
+
+.section h2 span {
+  background: var(--primary-bg);
+  padding: 0 5px;
+}
+
+b{
+  color: var(--accent-mild);
+}

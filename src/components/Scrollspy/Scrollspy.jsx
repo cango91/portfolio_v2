@@ -11,7 +11,7 @@ export default function Scrollspy() {
             let newCurrentSection = currentSection;
 
             for (const id of sections) {
-                const element = document.getElementById(id.replace(" ",""));
+                const element = document.getElementById(id.replace(" ", ""));
                 const rect = element.getBoundingClientRect();
                 const distance = Math.abs(rect.top);  // Distance from the top of the viewport
 
@@ -35,9 +35,11 @@ export default function Scrollspy() {
                     return (
                         <div
                             key={`stop_${section}`}
-                            className={`scrollspy__stop ${pastSection ? 'scrollspy__stop--active' : ''}`} style={{ left: `${(idx + 1) * 25 - 15}%` }}>
-                            <div className={`scrollspy__stop__text ${atSection ? 'active' : ''}`}>
-                                <a href={`#${section.replace(" ", "")}`}>{section}</a>
+                            className={`scrollspy__stop ${pastSection ? 'scrollspy__stop--active' : ''}`}
+                            style={{ left: `${(idx + 1) * 25 - 15}%` }}>
+                            <div className={`scrollspy__stop__text ${atSection ? 'active' : ''}`}
+                            >
+                                <a aria-label={`go to ${section} section`} tabIndex={1} role='navigation' href={`#${section.replace(" ", "")}`}>{section}</a>
                             </div>
                         </div>
                     );

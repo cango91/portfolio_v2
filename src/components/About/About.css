@@ -1,0 +1,114 @@
+.wave {
+    -webkit-animation-duration: 2.5s;
+    animation-duration: 2.5s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: wave;
+    animation-name: wave;
+    display: inline-block;
+    -webkit-transform-origin: 70% 70%;
+    transform-origin: 70% 70%;
+    z-index: -1;
+    position: relative;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.about{
+    display: flex;
+}
+
+.headshot {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    float: left;
+    margin: 10px;
+    border: 3px solid var(--accent-subtle);
+    shape-outside: margin-box;
+}
+
+.about__links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+    justify-content: center;
+}
+
+.link {
+    margin: 10px 0;
+    text-decoration: none;
+    color: var(--primary-text);
+    font-weight: 600;
+}
+
+.link:hover{
+    color: var(--accent-mild);
+}
+
+@keyframes wave {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    10% {
+        -webkit-transform: rotate(14deg);
+        transform: rotate(14deg);
+    }
+
+    20% {
+        -webkit-transform: rotate(-8deg);
+        transform: rotate(-8deg);
+    }
+
+    30% {
+        -webkit-transform: rotate(14deg);
+        transform: rotate(14deg);
+    }
+
+    40% {
+        -webkit-transform: rotate(-4deg);
+        transform: rotate(-4deg);
+    }
+
+    50% {
+        -webkit-transform: rotate(10deg);
+        transform: rotate(10deg);
+    }
+
+    60% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+
+@media screen and (max-width:812px) {
+    .about__links {
+        flex-direction: row;
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .link {
+        margin: 10px 15px;
+    }
+    .about{
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width:812px) {
+    .headshot {
+        height: 200px;
+        width: 200px;
+    }
+}
