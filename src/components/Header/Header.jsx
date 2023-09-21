@@ -3,6 +3,7 @@ import DyslexiaSelector from '../DyslexiaSelector/DyslexiaSelector';
 import ThemeSelector from '../ThemeSelector/ThemeSelector';
 import './Header.css';
 import Scrollspy from '../Scrollspy/Scrollspy';
+import ScrollToTop from '../ScrollToTop/ScrollToTop';
 
 export default function Header() {
     const [scrollY, setScrollY] = useState(0);
@@ -38,6 +39,7 @@ export default function Header() {
                     <Scrollspy />
                 </nav>
             </div>
+            <ScrollToTop show={topContentRef.current && scrollY>=topContentRef.current.offsetHeight} />
         </header>
     );
 }
