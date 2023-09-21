@@ -9,6 +9,9 @@ export default function App() {
     <div className={`app ${theme === 'dark' ? "dark-theme" : ""}`}>
       <Header />
       <main>
+        <section id="About">
+
+        </section>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dignissimos perspiciatis ullam, exercitationem eos cumque culpa at odit qui quam iure perferendis possimus tempore ab, sapiente, adipisci molestiae. Minus, exercitationem.</p>
         <p>Esse explicabo facere, est ipsam similique quo harum aliquam at quas quod, unde recusandae fugiat modi necessitatibus maxime dolor quam accusamus asperiores veritatis repudiandae doloribus soluta. Eos architecto corrupti facilis!</p>
         <p>Placeat provident eos obcaecati corrupti magnam, nisi facere quae consectetur mollitia facilis adipisci nemo tempora nulla expedita ipsum sapiente sunt at veritatis laborum vitae? Sit iusto incidunt nam sunt odit?</p>
@@ -42,10 +45,20 @@ export default function App() {
         <p>Amet enim odio ut architecto qui nemo nisi, obcaecati eius aliquid labore exercitationem deleniti unde blanditiis eaque suscipit quisquam temporibus, minima veritatis. Nesciunt doloribus nisi assumenda numquam, voluptate fugit ducimus.</p>
         <p>Odio, labore! Mollitia ex dolore ab obcaecati, earum quo perspiciatis vitae, incidunt quae, assumenda quas sed. Labore temporibus placeat doloremque voluptate, sunt maxime! Totam magnam quasi eius, beatae architecto hic.</p>
         <p>Ab odio reprehenderit itaque expedita quod voluptatibus illo, reiciendis et animi ut, nesciunt tempora corrupti quisquam consequuntur error ea vero numquam optio, nostrum quas dicta saepe? Quas cumque eum vel?</p>
+        <section id="TechStack">
+          
+        </section>
         <p>Nobis odio placeat molestiae beatae animi fugiat eligendi, mollitia distinctio asperiores officia porro dolores pariatur nam vero deserunt sunt magnam sapiente. Laboriosam reprehenderit iure enim laudantium placeat repellat rerum similique?</p>
         <p>Perferendis, nam magnam obcaecati voluptatibus quasi aspernatur, hic modi eligendi quas suscipit quibusdam vel amet veniam saepe illum repellendus impedit omnis, reprehenderit expedita doloremque quos atque cupiditate explicabo accusamus. Vel!</p>
         <p>Deleniti ad temporibus dolor, illum natus facilis vel delectus ducimus? In non a voluptates. Repellat earum optio repudiandae reiciendis quas dolore ea qui pariatur similique quis, itaque quidem unde alias?</p>
         <p>Repellat provident obcaecati voluptate suscipit? Molestias molestiae iure, illo quaerat hic fuga unde itaque laudantium repellat quasi voluptatum minus, officia corrupti est repellendus animi ut minima consequatur ipsam doloremque veritatis!</p>
+        <section id="Projects">
+          
+        </section>
+
+        <section id="Contact">
+          
+        </section>
         <p>Beatae dolor ullam facere non ducimus, voluptates pariatur dignissimos corporis, magni quidem natus veritatis sequi! Assumenda eligendi debitis maiores alias a commodi labore! Harum repellendus eum sit temporibus, modi nesciunt?</p>
         <p>Architecto, exercitationem libero. Saepe dignissimos quidem dolore doloribus voluptatibus quasi illum, debitis distinctio nihil, dolorem nisi nobis suscipit voluptate harum. Fuga quod vel magnam harum eligendi iure, a ut dolores.</p>
         <p>Quos necessitatibus accusamus magnam repellat fugit facere beatae nostrum qui laboriosam, ad incidunt atque. Deleniti quidem quaerat non dolore expedita maiores modi recusandae sunt sint, ut, sit, beatae unde autem?</p>

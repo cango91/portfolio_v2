@@ -1,0 +1,69 @@
+.scrollspy-container{
+    position: relative;
+}
+
+.scrollspy{
+    box-sizing: border-box;
+    position: relative;
+    padding: 0 5%;
+    width: 100%;
+    height: 4px;
+    background-color: var(--primary-bg);
+}
+
+.scrollspy__line{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:-5%
+}
+
+
+.scrollspy__stop {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: -4px; /* Half of 12px - 4px line width */
+    background-color: var(--primary-bg);
+    border-radius: 50%;
+  }
+
+  .scrollspy__stop__text{
+    transform: translateX(calc(-50% + 6px));
+    padding-top: 16px;
+    position: absolute; 
+    text-wrap: nowrap;
+  }
+
+  .scrollspy__stop__text a{
+    text-decoration: none;
+    color: var(--primary-text);
+  }
+
+  
+  .scrollspy__stop--active {
+    background-color: var(--accent-strong);
+  }
+
+  .scrollspy__stop__text.active a{
+    text-decoration: none;
+    color: var(--accent-mild);
+  }
+
+  .scrollspy__stop__text:not(.active) a:hover{
+    color: var(--accent-subtle);
+  }
+
+  .scrollspy__line--bg-10{
+    background-image: linear-gradient(to right, var(--accent-strong) 10%, var(--primary-bg) 25%);
+  }
+  .scrollspy__line--bg-35{
+    background-image: linear-gradient(to right, var(--accent-strong) 35%, var(--primary-bg) 50%);
+  }
+  .scrollspy__line--bg-60{
+    background-image: linear-gradient(to right, var(--accent-strong) 60%, var(--primary-bg) 75%);
+  }
+  .scrollspy__line--bg-85{
+    background-image: linear-gradient(to right, var(--accent-strong) 85%, var(--primary-bg) 100%);
+  }

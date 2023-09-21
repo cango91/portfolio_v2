@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import DyslexiaSelector from '../DyslexiaSelector/DyslexiaSelector';
 import ThemeSelector from '../ThemeSelector/ThemeSelector';
 import './Header.css';
+import Scrollspy from '../Scrollspy/Scrollspy';
 
 export default function Header() {
     const [scrollY, setScrollY] = useState(0);
@@ -29,12 +30,12 @@ export default function Header() {
                     <div className="header__settings__dyslexia-selector"><DyslexiaSelector /></div>
                 </div>
             </div>
-            <div className={`dummy-div ${scrollY < topContentRef.current?.offsetHeight ? 'd-none' : ''}`}></div>
+            <div className={`${scrollY < topContentRef.current?.offsetHeight || !topContentRef.current ? 'd-none' : 'dummy-div'}`}></div>
             <div 
             ref={stickyContentRef} 
             className={`header-sticky ${scrollY >= topContentRef.current?.offsetHeight ? 'p-fixed' : ''}`}>
                 <nav>
-                    This is sticky part of header
+                    <Scrollspy />
                 </nav>
             </div>
         </header>

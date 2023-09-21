@@ -16,7 +16,7 @@
   --accent-mild: #009966;
   /* A very light gray for borders or less important text */
   --accent-subtle: #cccccc;
-  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
 }
 
 /* Dark Theme (Original Portfolio colors) */
