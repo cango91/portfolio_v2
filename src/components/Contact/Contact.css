@@ -1,0 +1,41 @@
+.contact {
+    padding-top: 10px;
+}
+
+.contact__items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact__items a {
+    text-decoration: none;
+}
+
+
+
+.contact__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.contact__item:hover * {
+    color: var(--accent-mild);
+}
+
+.contact__item__icon {
+    font-size: 4rem;
+}
+
+.contact__item__text {
+    padding-top: 10px;
+}
+
+@media screen and (max-width:475px) {
+    .contact__items {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

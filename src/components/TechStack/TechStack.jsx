@@ -19,7 +19,7 @@ export default function TechStack({ onFilterChanged, selectedTechs }) {
         <div className='section'>
             <h2><span role='heading' aria-level="2" tabIndex={1}>Tech Stack</span></h2>
             <div className="tech-stack">
-                <div className="tech-stack__note">Hint: Select technologies to filter projects by used technologies</div>
+                <div tabIndex={1} className="tech-stack__note"><p>Hint: Select technologies to filter projects by used technologies</p></div>
                 <div className="tech-stack__stack">
                     <div className="tech-stack__stack__substack">
                         <TechItem active={!!(selectedTechs && selectedTechs.includes('js'))} icon="javascript-plain" name="JavaScript" id="js" onClick={toggleItem} />

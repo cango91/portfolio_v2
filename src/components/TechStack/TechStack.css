@@ -1,3 +1,6 @@
+.tech-stack{
+    padding-top: 10px;
+}
 .tech-stack__stack{
     display: flex;
     flex-direction: column;
