@@ -22,29 +22,29 @@ export default function TechStack({ onFilterChanged, selectedTechs }) {
                 <div tabIndex={1} className="tech-stack__note"><p>Hint: Select technologies to filter projects by used technologies</p></div>
                 <div className="tech-stack__stack">
                     <div className="tech-stack__stack__substack">
-                        <TechItem active={!!(selectedTechs && selectedTechs.includes('js'))} icon="javascript-plain" name="JavaScript" id="js" onClick={toggleItem} />
-                        <TechItem active={!!(selectedTechs && selectedTechs.includes('html'))} icon="html5-plain" name="HTML5" id="html" onClick={toggleItem} />
-                        <TechItem active={!!(selectedTechs && selectedTechs.includes('css'))} icon="css3-plain" name="CSS3" id="css" onClick={toggleItem} />
+                        <TechItem active={!!(selectedTechs && selectedTechs.includes('JavaScript'))} icon="javascript-plain" name="JavaScript" id="JavaScript" onClick={toggleItem} />
+                        <TechItem active={!!(selectedTechs && selectedTechs.includes('HTML5'))} icon="html5-plain" name="HTML5" id="HTML5" onClick={toggleItem} />
+                        <TechItem active={!!(selectedTechs && selectedTechs.includes('CSS3'))} icon="css3-plain" name="CSS3" id="CSS3" onClick={toggleItem} />
                     </div>
                     <div className="tech-stack__stack__substack">
-                        <TechItem active={!!(selectedTechs && selectedTechs.includes('mongo'))} icon="mongodb-plain" name="MongoDB" id="mongo" onClick={toggleItem} />
-                        <TechItem active={!!(selectedTechs && selectedTechs.includes('express'))} icon="express-original" name="Express" id="express" onClick={toggleItem} />
-                        <TechItem active={!!(selectedTechs && selectedTechs.includes('nodejs'))} icon="nodejs-plain" name="NodeJS" id="nodejs" onClick={toggleItem} />
-                        <TechItem active={!!(selectedTechs && selectedTechs.includes('react'))} icon="react-original" name="React" id="react" onClick={toggleItem} />
+                        <TechItem active={!!(selectedTechs && selectedTechs.includes('MongoDB'))} icon="mongodb-plain" name="MongoDB" id="MongoDB" onClick={toggleItem} />
+                        <TechItem active={!!(selectedTechs && selectedTechs.includes('Express'))} icon="express-original" name="Express" id="Express" onClick={toggleItem} />
+                        <TechItem active={!!(selectedTechs && selectedTechs.includes('NodeJS'))} icon="nodejs-plain" name="NodeJS" id="NodeJS" onClick={toggleItem} />
+                        <TechItem active={!!(selectedTechs && selectedTechs.includes('React'))} icon="react-original" name="React" id="React" onClick={toggleItem} />
                     </div>
                     <div className="tech-stack__stack__substack">
-                        <TechItem active={!!(selectedTechs && selectedTechs.includes('python'))} icon="python-plain" name="Python" id="python" onClick={toggleItem} />
-                        <TechItem active={!!(selectedTechs && selectedTechs.includes('django'))} icon="django-plain" name="Django" id="django" onClick={toggleItem} />
+                        <TechItem active={!!(selectedTechs && selectedTechs.includes('Python'))} icon="python-plain" name="Python" id="Python" onClick={toggleItem} />
+                        <TechItem active={!!(selectedTechs && selectedTechs.includes('Django'))} icon="django-plain" name="Django" id="Django" onClick={toggleItem} />
                     </div>
                     <div className="tech-stack__stack__substack">
-                    <TechItem active={!!(selectedTechs && selectedTechs.includes('tensorflow'))} icon="tensorflow-original" name="TensorFlow" id="tensorflow" onClick={toggleItem} />
-                    <TechItem active={!!(selectedTechs && selectedTechs.includes('opencv'))} icon="opencv-plain" name="OpenCV" id="opencv" onClick={toggleItem} />
+                    <TechItem active={!!(selectedTechs && selectedTechs.includes('TensorFlow'))} icon="tensorflow-original" name="TensorFlow" id="TensorFlow" onClick={toggleItem} />
+                    <TechItem active={!!(selectedTechs && selectedTechs.includes('OpenCV'))} icon="opencv-plain" name="OpenCV" id="OpenCV" onClick={toggleItem} />
 
                     </div>
                     <div className="tech-stack__stack__substack">
-                        <TechItem active={!!(selectedTechs && selectedTechs.includes('heroku'))} icon="heroku-original" name="Heroku" id="heroku" onClick={toggleItem} />
-                        <TechItem active={!!(selectedTechs && selectedTechs.includes('docker'))} icon="docker-plain" name="Docker" id="docker" onClick={toggleItem} />
-                        <TechItem active={!!(selectedTechs && selectedTechs.includes('aws'))} icon="amazonwebservices-original" name="AWS" id="aws" onClick={toggleItem} />
+                        <TechItem active={!!(selectedTechs && selectedTechs.includes('Heroku'))} icon="heroku-original" name="Heroku" id="Heroku" onClick={toggleItem} />
+                        <TechItem active={!!(selectedTechs && selectedTechs.includes('Docker'))} icon="docker-plain" name="Docker" id="Docker" onClick={toggleItem} />
+                        <TechItem active={!!(selectedTechs && selectedTechs.includes('AWS'))} icon="amazonwebservices-original" name="AWS" id="AWS" onClick={toggleItem} />
                     </div>
                 </div>
             </div>
