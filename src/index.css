@@ -58,6 +58,11 @@ code {
   outline: 3px solid var(--accent-mild);
 }
 
+/* Override when using mouse */
+.using-mouse *:focus {
+  outline: none;
+}
+
 
 *{
   color: var(--primary-text);

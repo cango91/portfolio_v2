@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import About from './components/About/About';
 import Header from './components/Header/Header';
@@ -10,7 +10,30 @@ import Footer from './components/Footer/Footer';
 
 export default function App() {
   const [filters, setFilters] = useState([]);
+  const [usingMouse, setUsingMouse] = useState(false);
   const { theme } = useTheme();
+
+  // When using mouse, don't show the focus outline
+  useEffect(()=>{
+    const handleMouseDown = () =>{
+      if(usingMouse) return
+      setUsingMouse(true);
+      document.body.classList.add('using-mouse');
+    }
+    const handleKeyPress = (e)=>{
+      if(!usingMouse) return;
+      if(e.key==='Tab'){
+        setUsingMouse(false);
+        document.body.classList.remove('using-mouse');
+      }
+    }
+    window.addEventListener('keydown',handleKeyPress);
+    window.addEventListener('mousedown',handleMouseDown);
+    return ()=>{
+      window.removeEventListener('keydown',handleKeyPress);
+      window.removeEventListener('mousedown',handleMouseDown);
+    }
+  },[usingMouse]);
 
   const onFilterChanged = filters => {
     setFilters(filters);
@@ -33,9 +56,7 @@ export default function App() {
           <Contact />
         </section>
       </main>
-      <footer>
         <Footer />
-      </footer>
     </div>
   );
 }
