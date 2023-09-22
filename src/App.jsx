@@ -6,6 +6,7 @@ import TechStack from './components/TechStack/TechStack';
 import { useTheme } from './contexts/ThemeContext';
 import Projects from './components/Projects/Projects';
 import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
 
 export default function App() {
   const [filters, setFilters] = useState([]);
@@ -32,6 +33,9 @@ export default function App() {
           <Contact />
         </section>
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
