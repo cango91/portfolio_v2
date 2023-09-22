@@ -39,7 +39,7 @@ export default function Scrollspy() {
                             style={{ left: `${(idx + 1) * 25 - 15}%` }}>
                             <div className={`scrollspy__stop__text ${atSection ? 'active' : ''}`}
                             >
-                                <a aria-label={`go to ${section} section`} tabIndex={1} role='navigation' href={`#${section.replace(" ", "")}`}>{section}</a>
+                                <a aria-label={`go to ${section} section`} tabIndex={0} role='navigation' href={`#${section.replace(" ", "")}`}>{section}</a>
                             </div>
                         </div>
                     );

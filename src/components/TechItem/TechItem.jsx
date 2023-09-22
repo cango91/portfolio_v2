@@ -14,7 +14,7 @@ export default function TechItem({ icon, name, id, onClick, active }) {
             aria-label={name}
             role='button'
             className="tech-icon-container"
-            tabIndex={1}
+            tabIndex={0}
             onKeyDown={onKeyPress}
             onClick={() => onClick(id)}>
             <i
