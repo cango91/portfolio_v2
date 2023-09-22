@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# Personal Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the source code for my personal portfolio. Although this is not a template, you can adapt it to your needs with some effort, if you're familiar with React and NodeJS.
 
-## Available Scripts
+After cloning, use `npm install` to install dependencies. Then `npm start` will start development server and you can view your changes reflected live. Use `npm run build` to build the React project.
 
-In the project directory, you can run:
+## An Overview of Components
 
-### `npm start`
+Components are simple and straightforward for the most part and their naming should make their purpose clear. Below are some specialized components that you may need to modify.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Scrollspy 
+`src/components/Scrollspy/Scrollspy.jsx`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This is the sticky scrollspy component. Its CSS is hard-coded and its functionality is **very** tightly-coupled to your overall web-page. If you modify this code for your own needs, either dispose of this component, or make sure to update it to your own requirements.
 
-### `npm test`
+`const sections = ["About", "Tech Stack", "Projects", "Contact"];` 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+should match your section ids exactly. Also, if you will be adding more than 4 sections to your page, make sure to update the logic here:
+```jsx
+ <div className={`scrollspy__line scrollspy__line--bg-${sections.findIndex(el => el === currentSection) * 25 + 10}`}></div>
+```
+and here
+```jsx
+ <div className={`scrollspy__stop__text ${atSection ? 'active' : ''}`}>
+```
+and the css so the line gradients and stops match your section count.
 
-### `npm run build`
+### Projects, ProjectCarousel and ProjectCard
+`src/components/`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+These 3 components work together with `TechStack` component to enable a filtered view into the projects. Of note here is the accessibility hacks. These 3 make use of the `swiper` library for aesthetics. However by default, I couldn't get Swiper Components' navigation controllers to play nice with keyboard navigation. So I implemented keydown listeners listening for `Tab` and `Shift+Tab` on these 3 components. That is so the user doesn't have to traverse all the projects and can use swiper's navigation controls instead.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+If you know of a better way (there has got to be one!) to achieve this, please reach me!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### ThemeContext
+`src/contexts/ThemeContext.js`
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Uses ContextAPI to provide theme state to the whole app. If the user has not made an explicit theme choice by at least clicking the theme selector once (which is persisted in `localStorage` thereafter), will add a listener to listen to mediaQuery, which might report a system-wide preference of light or dark theme, and may change during the day depending on time-of-day. Never really tested the change detection, but in theory it should work, as it correctly works on initial setup.
