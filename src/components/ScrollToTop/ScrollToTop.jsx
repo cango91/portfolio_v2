@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import './ScrollToTop.css';
 
 export default function ScrollToTop({ show }) {

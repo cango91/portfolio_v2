@@ -1,0 +1,67 @@
+.tech-icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    width: fit-content;
+    height: fit-content;
+    padding: 3px;
+}
+
+.tech-icon-container:focus-within {
+    outline: 3px solid var(--accent-mild);
+}
+
+/* Disable the default focus style for children */
+.tech-icon-container *:focus {
+    outline: none;
+}
+
+.tech-icon__icon {
+    color: var(--secondary-text);
+    font-size: 4rem;
+    transition: color 0.2s ease;
+}
+
+.tech-icon__name {
+    font-size: 1.25rem;
+    margin-top: 5px;
+    transition: color 0.2s ease;
+
+}
+
+.tech-icon__icon.dark-theme,
+.tech-icon__name.dark-theme {
+    color: var(--primary-text);
+}
+
+.tech-icon__icon--active,
+.tech-icon__name--active,
+.dark-theme.tech-icon__icon--active,
+.dark-theme.tech-icon__name--active {
+    color: var(--accent-mild);
+}
+
+.tech-icon-container:hover .tech-icon__name,
+.tech-icon-container:hover .tech-icon__icon {
+    color: var(--primary-text);
+    cursor: pointer;
+}
+
+.tech-icon-container:hover .dark-theme.tech-icon__name,
+.tech-icon-container:hover .dark-theme.tech-icon__icon {
+    color: var(--secondary-text);
+    cursor: pointer;
+}
+
+.tech-icon-container:hover .tech-icon__name--active,
+.tech-icon-container:hover .tech-icon__icon--active {
+    color: var(--accent-strong);
+    cursor: pointer;
+}
+
+.tech-icon-container:hover .dark-theme.tech-icon__name--active,
+.tech-icon-container:hover .dark-theme.tech-icon__icon--active {
+    color: var(--accent-subtle);
+    cursor: pointer;
+}
