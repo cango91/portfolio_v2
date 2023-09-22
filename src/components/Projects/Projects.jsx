@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import ProjectCarousel from '../ProjectCarousel/ProjectCarousel';
 import './Projects.css';
 
@@ -21,11 +22,19 @@ const projects = [
 ]
 
 export default function Projects({ filters }) {
+    const [filteredProjects, setFilteredProjects] = useState(projects);
+    useEffect(()=>{
+        if(!filters || !filters.length){
+            setFilteredProjects(projects);
+        }else{
+            setFilteredProjects(projects.filter((project) => filters.every((filter)=> project.technologies.includes(filter))));
+        }
+    },[filters]);
     return (
         <div className='section'>
             <h2><span role='heading' aria-level="2" tabIndex={1}>Projects</span></h2>
             <div className="projects">
-                <ProjectCarousel projects={projects} />
+                <ProjectCarousel projects={filteredProjects} />
             </div>
         </div>
     );

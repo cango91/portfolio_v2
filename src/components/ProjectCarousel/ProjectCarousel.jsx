@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 // import required modules
-import { EffectCoverflow, Pagination, Navigation, A11y, EffectFade, EffectCube } from 'swiper/modules';
+import { EffectCoverflow, Pagination, Navigation, A11y } from 'swiper/modules';
 import ProjectCard from '../ProjectCard/ProjectCard';
 // Import Swiper styles
 import 'swiper/css';
@@ -16,29 +16,22 @@ export default function ProjectCarousel({ projects }) {
             <Swiper
                 grabCursor={true}
                 loop={true}
-                navigation
+                navigation={{enabled:true}}
                 modules={[Navigation, Pagination, A11y, EffectCoverflow]}
                 pagination={{ clickable: true, dynamicBullets: true }}
                 effect='coverflow'
                 className='swiper'
-                // coverflowEffect={{
-                //     depth: 50,
-                //     stretch:0,
-                //     rotate: 50,
-                //     slideShadows:false
-                // }}
-                a11y
+                a11y={{enabled:true}}
                 centeredSlides={true}
-                // spaceBetween={-500}
             >
                 {
                     projects.map((project, idx) => {
                         return (
-                            <>
-                                <SwiperSlide className='slide'>
-                                    <ProjectCard {...project} key={`proj-card-${idx}`} />
-                                </SwiperSlide>
-                            </>
+
+                            <SwiperSlide key={`proj-card-${idx}`} className='slide'>
+                                <ProjectCard {...project} />
+                            </SwiperSlide>
+
                         );
                     })
                 }

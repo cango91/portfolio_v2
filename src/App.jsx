@@ -50,7 +50,7 @@ export default function App() {
           <TechStack onFilterChanged={onFilterChanged} selectedTechs={filters} />
         </section>
         <section id="Projects">
-          <Projects />
+          <Projects filters={filters} />
         </section>
         <section id="Contact">
           <Contact />

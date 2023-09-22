@@ -37,7 +37,7 @@
     justify-content: center;
 }
 
-.swiper-pagination-bullet{
+.dark-theme .swiper-pagination-bullet{
     background-color: var(--accent-subtle);
 }
 
