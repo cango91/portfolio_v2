@@ -37,7 +37,7 @@ const projects = [
     {
         title: 'The Thomas Collective',
         description: 'A travel app focusing on train travel, done as a group project. Features full-CRUD capabilities, user authentication and e-mail verification',
-        technologies: ['Python', 'Django', 'Heroku'],
+        technologies: ['Python', 'Django', 'Heroku','HTML5','CSS3','JavaScript'],
         imgSrc: "screenshots/thomas.webp",
         githubLink: [{ title: "GitHub", src: "https://github.com/cango91/thomascollective" }],
         deploymentLink: { title: "Live Site", src: "https://thomas-collective-mirror-b5c42af6481f.herokuapp.com/" }

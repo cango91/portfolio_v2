@@ -9,7 +9,7 @@ export function useTheme() {
 }
 
 export function ThemeProvider({ children }) {
-    const [theme, setTheme] = useState('light');
+    const [theme, setTheme] = useState('loading');
     const [dyslexicMode, setDyslexicMode] = useState('off');
     const mediaQuery = useRef(null);
     const changeTheme = (e) => setTheme(e.matches ? 'dark' : 'light');

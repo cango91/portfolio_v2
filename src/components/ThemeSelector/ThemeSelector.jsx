@@ -9,7 +9,8 @@ export default function ThemeSelector({ tabindex }) {
     const [initial, setInitial] = useState(true);
     const lottieRef = useRef(null);
     useEffect(() => {
-        const animInstance = lottieRef.current?.animationItem;
+        if(theme==='loading') return;
+        const animInstance = lottieRef.current;
         if (animInstance) {
             // if first load, do not animate, go to frame and stop
             if (initial) {
