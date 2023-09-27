@@ -16,15 +16,15 @@ const projects = [
         description: 'End-to-end encrypted, web-based chat-app, with a unique data-architecture for mitigating data leaks. Features multiple security layers and real-time messaging.',
         technologies: ['React', 'MongoDB', 'Socket.io', 'Express', 'NodeJS', 'JavaScript', 'Heroku', 'CSS3'],
         imgSrc: "screenshots/convault.webp",
-        githubLink: [{ title: "GitHub (frontend)", src: "https://github.com/cango91/convault-frontend" }, { title: "GitHub (backend)", src: "" }],
-        deploymentLink: { title: "Live Site", src: "https://github.com/cango91/convault-backend" }
+        githubLink: [{ title: "GitHub (front-end)", src: "https://github.com/cango91/convault-frontend" }, { title: "GitHub (back-end)", src: "https://github.com/cango91/convault-backend" }],
+        deploymentLink: { title: "Live Site", src: "https://convault-d603666b3d0b.herokuapp.com/" }
     },
     {
         title: 'Café Normalé',
         description: 'A restaurant app for the visually-impaired, featuring speech-to-text and supporting keyboard-only navigation. Worked with a team of 3 UX Designers and 2 other devs as part of a mini-hackathon.',
         technologies: ['React', 'MongoDB', 'Express', 'NodeJS', 'JavaScript', 'CSS3'],
         imgSrc: "screenshots/cafeNormale.webp",
-        githubLink: [{ title: "GitHub", src: "" }],
+        githubLink: [{ title: "GitHub", src: "https://github.com/cango91/ga-mini-hackathon" }],
     },
     {
         title: 'email-verify',
