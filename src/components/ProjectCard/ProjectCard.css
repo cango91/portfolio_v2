@@ -31,7 +31,8 @@
 }
 
 .project-card__img img {
-
+    object-fit: contain;
+    max-height: 276.75px;
     width: 492px;
 }
 
@@ -83,6 +84,8 @@
     }
 
     .project-card__img img {
+        object-fit: contain;
+        max-height: 444.5px;
         width: 792px;
     }
 }

@@ -4,6 +4,14 @@ import './Projects.css';
 
 const projects = [
     {
+        title: 'PresenTly',
+        description: '1st place winner of "Automate Your Life" hackathon. Presently is an AI-powered birthday gifting companion!',
+        technologies: ["React", "React Native", "MongoDB", "Express", "NodeJS", "JavaScript", "TypeScript", "AWS", "Jest", "OpenAI API", "Bing Search API", "CSS3"],
+        imgSrc: "screenshots/presently.webp",
+        githubLink: [{title: "GitHub(web front-end)", src: "https://github.com/GA-Oct-hackathon-team-3/frontend"}, {title: "GitHub (backend)", src:"https://github.com/GA-Oct-hackathon-team-3/backend"}],
+        deploymentLink: {title: "Live Site", src: "https://ga-oct-hackathon-team-3.github.io/"}
+    },
+    {
         title: 'eyeConnect',
         description: 'A tele-medicine web-app for connecting medical professionals with specialists. Features encryption-at-rest and AI-assisted medical image classification.',
         technologies: ["MongoDB", "Express", "NodeJS", "JavaScript", "TensorFlow", "OpenCV", "HTML5", "CSS3", "Heroku", "Docker"],
