@@ -22,7 +22,7 @@ export default function DyslexiaSelector({ tabindex }) {
                 onKeyDown={onKeyPress}
                 aria-label={`${dyslexicMode === 'on' ? 'Disable' : 'Enable'} dyslexic mode`}
             >
-                dyslexic mode
+                accessibility mode
                 <input
                     type="checkbox"
                     name="dyslexic-mode-toggler"

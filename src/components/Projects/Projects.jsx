@@ -6,7 +6,7 @@ const projects = [
     {
         title: 'PresenTly',
         description: '1st place winner of "Automate Your Life" hackathon. Developed by a team of 6 developers and 4 UX designers, Presently is an AI-powered birthday gifting companion!',
-        technologies: ["React", "React Native", "MongoDB", "Express", "NodeJS", "JavaScript", "TypeScript", "AWS", "Jest", "OpenAI API", "Bing Search API", "CSS3"],
+        technologies: ["React", "React Native", "MongoDB", "Express", "NodeJS", "JavaScript", "TypeScript", "AWS", "Jest", "OpenAI API", "Bing Search API", "Heroku", "CSS3"],
         imgSrc: "screenshots/presently.webp",
         githubLink: [{title: "GitHub (web front-end)", src: "https://github.com/GA-Oct-hackathon-team-3/frontend"}, {title:"GitHub (native front-end)", src:"https://github.com/GA-Oct-hackathon-team-3/mobile"}, {title: "GitHub (backend)", src:"https://github.com/GA-Oct-hackathon-team-3/backend"}],
         deploymentLink: {title: "Live Site", src: "https://ga-oct-hackathon-team-3.github.io/"}
