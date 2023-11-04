@@ -9,7 +9,7 @@ const projects = [
         technologies: ["React", "React Native", "MongoDB", "Express", "NodeJS", "JavaScript", "TypeScript", "AWS", "Jest", "OpenAI API", "Bing Search API", "Heroku", "CSS3"],
         imgSrc: "screenshots/presently.webp",
         githubLink: [{title: "GitHub (web front-end)", src: "https://github.com/GA-Oct-hackathon-team-3/frontend"}, {title:"GitHub (native front-end)", src:"https://github.com/GA-Oct-hackathon-team-3/mobile"}, {title: "GitHub (backend)", src:"https://github.com/GA-Oct-hackathon-team-3/backend"}],
-        deploymentLink: {title: "Live Site", src: "https://ga-oct-hackathon-team-3.github.io/"}
+        deploymentLinks: [{title: "Live Site", src: "https://ga-oct-hackathon-team-3.github.io/"}, {title: "Demo Video", src:"https://youtu.be/R8AGdcMoaQY"}]
     },
     {
         title: 'eyeConnect',
@@ -17,7 +17,7 @@ const projects = [
         technologies: ["MongoDB", "Express", "NodeJS", "JavaScript", "TensorFlow", "OpenCV", "HTML5", "CSS3", "Heroku", "Docker"],
         imgSrc: "screenshots/eyeConnect.webp",
         githubLink: [{ title: 'GitHub', src: "https://github.com/cango91/eye-connect" }],
-        deploymentLink: { title: "Live Site", src: "https://eye-connect-6befc020749e.herokuapp.com/" }
+        deploymentLinks: [{ title: "Live Site", src: "https://eye-connect-6befc020749e.herokuapp.com/" }]
     },
     {
         title: 'Convault',
@@ -25,7 +25,7 @@ const projects = [
         technologies: ['React', 'MongoDB', 'Socket.io', 'Express', 'NodeJS', 'JavaScript', 'Heroku', 'CSS3'],
         imgSrc: "screenshots/convault.webp",
         githubLink: [{ title: "GitHub (front-end)", src: "https://github.com/cango91/convault-frontend" }, { title: "GitHub (back-end)", src: "https://github.com/cango91/convault-backend" }],
-        deploymentLink: { title: "Live Site", src: "https://convault-d603666b3d0b.herokuapp.com/" }
+        deploymentLinks: [{ title: "Live Site", src: "https://convault-d603666b3d0b.herokuapp.com/" }]
     },
     {
         title: 'Café Normalé',
@@ -40,7 +40,7 @@ const projects = [
         technologies: ['Python', 'Django'],
         imgSrc: "screenshots/emailVerify.webp",
         githubLink: [{ title: "GitHub", src: "https://github.com/cango91/email-verify" }],
-        deploymentLink: { title: "PyPI", src: "https://pypi.org/project/email-verify/" }
+        deploymentLinks: [{ title: "PyPI", src: "https://pypi.org/project/email-verify/" }]
     },
     {
         title: 'The Thomas Collective',
@@ -48,7 +48,7 @@ const projects = [
         technologies: ['Python', 'Django', 'Heroku','HTML5','CSS3','JavaScript'],
         imgSrc: "screenshots/thomas.webp",
         githubLink: [{ title: "GitHub", src: "https://github.com/cango91/thomascollective" }],
-        deploymentLink: { title: "Live Site", src: "https://thomas-collective-mirror-b5c42af6481f.herokuapp.com/" }
+        deploymentLinks: [{ title: "Live Site", src: "https://thomas-collective-mirror-b5c42af6481f.herokuapp.com/" }]
     },
     {
         title: 'Solitaire (Klondike)',
@@ -56,7 +56,7 @@ const projects = [
         technologies: ["HTML5", "CSS3", "JavaScript"],
         imgSrc: "screenshots/solitaire.webp",
         githubLink: [{ title: "GitHub", src: "https://github.com/cango91/solitaire" }],
-        deploymentLink: { title: "Play now!", src: "https://cango91.github.io/solitaire/src/index.html" }
+        deploymentLinks: [{ title: "Play now!", src: "https://cango91.github.io/solitaire/src/index.html" }]
     }
 ]
 

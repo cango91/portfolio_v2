@@ -17,7 +17,7 @@ export default function ProjectCarousel({ projects }) {
         const handleReverseTab = (e) => {
             if (e.key === 'Tab' && e.shiftKey) {
                 e.preventDefault();
-            const elemToFocus = document.querySelector(".swiper-slide-visible.swiper-slide-active .project-card__footer__deployment-link [tabindex=\"0\"]");
+            const elemToFocus = document.querySelector(".swiper-slide-visible.swiper-slide-active .project-card__footer__deployment-link .link:last-of-type [tabindex=\"0\"]");
                 if (elemToFocus) {
                     elemToFocus.focus();
                 }

@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { useTheme } from '../../contexts/ThemeContext';
 import './ProjectCard.css';
 
-export default function ProjectCard({ technologies, title, description, deploymentLink, githubLink, imgSrc }) {
+export default function ProjectCard({ technologies, title, description, deploymentLinks, githubLink, imgSrc }) {
     const lastElRef = useRef(null);
     const firstElRef = useRef(null);
     const { theme } = useTheme();
@@ -39,6 +39,13 @@ export default function ProjectCard({ technologies, title, description, deployme
             firstElRef.current?.removeEventListener('keydown', onFirstElKeyPress);
         }
     }, []);
+
+    const setLastElRef = (element, index) => {
+        if (index === deploymentLinks.length - 1) {
+            lastElRef.current = element;
+        }
+    };
+
     return (
         <div ref={firstElRef} tabIndex={0} aria-label={`${title} Project Card`} className={`project-card ${theme === 'dark' ? 'dark-theme' : ''}`}>
             <div tabIndex={0} className="project-card__title">{title}</div>
@@ -52,22 +59,25 @@ export default function ProjectCard({ technologies, title, description, deployme
                 </div>
                 <div className="project-card__footer">
                     <div className="project-card__footer__github-link">
-                        {githubLink.map((item, idx) => {
-                            return (
-                                <div key={`${item.title}_${idx}`} className="link"><a tabIndex={0} target='_blank' rel='noreferrer noopener' href={item.src}>{item.title}</a></div>
-                            );
-                        })}
+                        {githubLink.map((item, idx) => (
+                            <div key={`${item.title}_${idx}`} className="link">
+                                <a tabIndex={0} target='_blank' rel='noreferrer noopener' href={item.src}>{item.title}</a>
+                            </div>
+                        ))}
                     </div>
                     <div className="project-card__footer__deployment-link">
-                        {
-                            deploymentLink ? <div className="link">
-                                <a ref={lastElRef} tabIndex={0} target='_blank' rel='noreferrer noopener' href={deploymentLink.src}>{deploymentLink.title}</a>
-                            </div> : <span ref={lastElRef} tabIndex={0}> "Deployment coming soon"</span>
-                        }
+                        {deploymentLinks && deploymentLinks.length > 0 ? (
+                            deploymentLinks.map((item, idx) => (
+                                <div key={`${item.title}_${idx}`} className="link">
+                                    <a ref={(el) => setLastElRef(el, idx)} tabIndex={0} target='_blank' rel='noreferrer noopener' href={item.src}>{item.title}</a>
+                                </div>
+                            ))
+                        ) : (
+                            <span tabIndex={0}>Deployment coming soon</span>
+                        )}
                     </div>
                 </div>
             </div>
-
         </div>
     );
 }
