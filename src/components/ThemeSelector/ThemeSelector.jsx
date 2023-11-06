@@ -3,13 +3,15 @@ import { useEffect, useRef, useState } from "react";
 import animationData from './icons8-sun.json';
 import './ThemeSelector.css';
 import { useTheme } from "../../contexts/ThemeContext";
+import { useTranslation } from "react-i18next";
 
 export default function ThemeSelector({ tabindex }) {
     const { theme, setThemePreference } = useTheme();
     const [initial, setInitial] = useState(true);
     const lottieRef = useRef(null);
+    const { t } = useTranslation();
     useEffect(() => {
-        if(theme==='loading') return;
+        if (theme === 'loading') return;
         const animInstance = lottieRef.current;
         if (animInstance) {
             // if first load, do not animate, go to frame and stop
@@ -47,9 +49,11 @@ export default function ThemeSelector({ tabindex }) {
         }
     }
 
+    const ariaLabelKey = theme === 'dark' ? 'aria_switch_to_light' : 'aria_switch_to_dark';
+
     return (
         <div tabIndex={tabindex || 0}
-            aria-label={`switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
+            aria-label={t(ariaLabelKey)}
             className="theme-selector-button"
             onClick={switchTheme}
             onKeyDown={onKeyPress}

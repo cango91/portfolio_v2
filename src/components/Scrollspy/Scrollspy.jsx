@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import './Scrollspy.css';
 
 const sections = ["About", "Tech Stack", "Projects", "Contact"];
 
 export default function Scrollspy() {
     const [currentSection, setCurrentSection] = useState('About');
+    const {t} = useTranslation();
     useEffect(() => {
         const handleScroll = e => {
             let minDistance = Infinity;
@@ -39,7 +41,7 @@ export default function Scrollspy() {
                             style={{ left: `${(idx + 1) * 25 - 15}%` }}>
                             <div className={`scrollspy__stop__text ${atSection ? 'active' : ''}`}
                             >
-                                <a aria-label={`go to ${section} section`} tabIndex={0} role='navigation' href={`#${section.replace(" ", "")}`}>{section}</a>
+                                <a aria-label={t(`aria_goto_${section}`)} tabIndex={0} role='navigation' href={`#${section.replace(" ", "")}`}>{t(`section_${section}`)}</a>
                             </div>
                         </div>
                     );

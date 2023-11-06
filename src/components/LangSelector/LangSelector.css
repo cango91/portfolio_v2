@@ -1,0 +1,33 @@
+.language-selector {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .flag {
+    font-size: 1.5rem; /* Smaller size for inactive flag */
+    opacity: 0.5; /* Transparency for inactive flag */
+    transition: opacity 0.3s ease, font-size 0.3s ease; /* Smooth transition for size and opacity */
+  }
+  
+  .flag:hover {
+    opacity: 1; /* On hover, make the inactive flag opaque */
+  }
+  
+  .flag.active {
+    font-size: 1.8rem; /* Slightly bigger for active flag */
+    opacity: 1; /* Opaque for active flag */
+  }
+
+  @media screen and (max-width: 811px) {
+    .language-selector {
+        font-size: 0.8em; /* adjust the size of flags */
+      }
+      
+      .flag {
+        display: inline-block; /* ensure flags are inline */
+        width: 1.2em; /* fixed width for flags */
+        height: 1.2em; /* fixed height for flags */
+        margin: 0 0.2em; /* spacing around flags */
+      }
+  }

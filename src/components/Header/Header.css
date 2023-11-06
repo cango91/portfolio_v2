@@ -55,6 +55,10 @@
     display: none;
 }
 
+.header__settings__lang-selector{
+    margin-left: 20px;
+}
+
 @media screen and (min-width: 812px) {
     .header__personal {
         display: flex;
@@ -68,3 +72,77 @@
         font-size: xx-large;
     }
 }
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 811px) {
+    .header-top{
+        align-items: center;
+        
+        
+    }
+    .header__personal {
+        flex-direction: column; 
+        align-items: flex-start; 
+        
+    }
+
+    .header__personal--name {
+        font-size: larger;
+        margin-bottom: 0.5rem; 
+    }
+
+    .header__settings {
+        flex-direction: column; 
+        gap: 0.5rem;
+
+    }
+
+    .header__settings__theme-selector{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .header__settings__lang-selector{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    .header__settings > * {
+        width: 100%;
+        /* margin-bottom: 0.5rem; */
+    }
+}
+/* 
+@media screen and (max-width: 811px) {
+    .header-top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .header__personal {
+        flex: 1 1 auto;
+        align-items: flex-start;
+        padding-right: 10px;
+    }
+
+    .header__personal--name {
+        font-size: larger;
+        margin-bottom: 0.5rem;
+    }
+
+    .header__settings {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+    }
+
+    .header__settings__theme-selector,
+    .header__settings__dyslexia-selector,
+    .header__settings__lang-selector {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 0; 
+    }
+} */

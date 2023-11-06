@@ -1,6 +1,8 @@
+import { useTranslation } from 'react-i18next';
 import './ScrollToTop.css';
 
 export default function ScrollToTop({ show }) {
+    const {t} = useTranslation();
     const scrollToTop = () => {
         window.scroll({ top: true });
     }
@@ -13,7 +15,7 @@ export default function ScrollToTop({ show }) {
     return (
         <div
             tabIndex={2}
-            aria-label='scroll to top'
+            aria-label={t('aria_scroll_to_top')}
             role='button'
             className={`scroll-to-top-container ${show ? '' : 'invisible'}`}
             onClick={scrollToTop}

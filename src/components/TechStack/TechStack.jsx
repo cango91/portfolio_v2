@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import TechItem from '../TechItem/TechItem';
 import './TechStack.css';
+import { useTranslation } from 'react-i18next';
 
 export default function TechStack({ onFilterChanged, selectedTechs }) {
     const [filters, setFilters] = useState([]);
+    const {t} = useTranslation();
 
     const toggleItem = item => {
         const set = new Set(filters);
@@ -17,9 +19,9 @@ export default function TechStack({ onFilterChanged, selectedTechs }) {
     }
     return (
         <div className='section'>
-            <h2><span role='heading' aria-level="2" tabIndex={0}>Tech Stack</span></h2>
+            <h2><span role='heading' aria-level="2" tabIndex={0}>{t('section_Tech Stack')}</span></h2>
             <div className="tech-stack">
-                <div tabIndex={0} className="tech-stack__note"><p>Hint: Select technologies to filter projects by used technologies</p></div>
+                <div tabIndex={0} className="tech-stack__note"><p>{t('hint_techs')}</p></div>
                 <div className="tech-stack__stack">
                     <div className="tech-stack__stack__substack">
                         <TechItem active={!!(selectedTechs && selectedTechs.includes('JavaScript'))} icon="javascript-plain" name="JavaScript" id="JavaScript" onClick={toggleItem} />

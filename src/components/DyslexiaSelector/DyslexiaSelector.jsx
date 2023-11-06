@@ -1,8 +1,10 @@
+import { useTranslation } from 'react-i18next';
 import { useTheme } from '../../contexts/ThemeContext';
 import './DyslexiaSelector.css';
 
 export default function DyslexiaSelector({ tabindex }) {
     const { dyslexicMode, setDyslexicModePreference } = useTheme();
+    const { t } = useTranslation();
 
     const toggleDyslexicMode = () => {
         setDyslexicModePreference(dyslexicMode === 'on' ? 'off' : 'on');
@@ -13,6 +15,7 @@ export default function DyslexiaSelector({ tabindex }) {
             toggleDyslexicMode();
         }
     }
+    const ariaLabelKey = dyslexicMode === 'on' ? 'aria_disable_dyslexic_mode' : 'aria_enable_dyslexic_mode'
     return (
         <div className="dyslexia-selector">
             <label
@@ -20,9 +23,9 @@ export default function DyslexiaSelector({ tabindex }) {
                 htmlFor="dys-selector"
                 tabIndex={tabindex || 0}
                 onKeyDown={onKeyPress}
-                aria-label={`${dyslexicMode === 'on' ? 'Disable' : 'Enable'} dyslexic mode`}
+                aria-label={t(ariaLabelKey)}
             >
-                accessibility mode
+                {t("accessibility_mode")}
                 <input
                     type="checkbox"
                     name="dyslexic-mode-toggler"

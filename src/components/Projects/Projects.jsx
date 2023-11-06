@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import ProjectCarousel from '../ProjectCarousel/ProjectCarousel';
 import './Projects.css';
+import { useTranslation } from 'react-i18next';
 
 const projects = [
     {
@@ -17,7 +18,7 @@ const projects = [
         technologies: ["MongoDB", "Express", "NodeJS", "JavaScript", "TensorFlow", "OpenCV", "HTML5", "CSS3", "Heroku", "Docker"],
         imgSrc: "screenshots/eyeConnect.webp",
         githubLink: [{ title: 'GitHub', src: "https://github.com/cango91/eye-connect" }],
-        deploymentLinks: [{ title: "Live Site", src: "https://eye-connect-6befc020749e.herokuapp.com/" }]
+        deploymentLinks: [{ title: "Live Site", src: "https://eye-connect-6befc020749e.herokuapp.com/" }, {title: "Demo Video", src: "https://youtu.be/rngKwGVvSX0"}]
     },
     {
         title: 'Convault',
@@ -63,6 +64,7 @@ const projects = [
 export default function Projects({ filters }) {
     const headerRef = useRef(null);
     const [filteredProjects, setFilteredProjects] = useState(projects);
+    const {t} = useTranslation();
     useEffect(() => {
         if (!filters || !filters.length) {
             setFilteredProjects(projects);
@@ -88,10 +90,10 @@ export default function Projects({ filters }) {
     }, []);
     return (
         <div className='section'>
-            <h2><span ref={headerRef} role='heading' aria-level="2" tabIndex={0}>Projects</span></h2>
+            <h2><span ref={headerRef} role='heading' aria-level="2" tabIndex={0}>{t('section_Projects')}</span></h2>
             <div className="projects">
                 {!!filteredProjects.length && <ProjectCarousel projects={filteredProjects} />}
-                {!filteredProjects.length && <div tabIndex={0} id="no-projects-message">No projects with the selected filters</div>}
+                {!filteredProjects.length && <div tabIndex={0} id="no-projects-message">{t('no_projects')}</div>}
             </div>
         </div>
     );
