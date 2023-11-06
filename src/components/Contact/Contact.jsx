@@ -1,10 +1,12 @@
+import { useTranslation } from 'react-i18next';
 import './Contact.css';
 export default function Contact() {
+    const {t} = useTranslation();
     return (
         <div className='section'>
-            <h2><span role='heading' aria-level="2" tabIndex={0}>Contact</span></h2>
+            <h2><span role='heading' aria-level="2" tabIndex={0}>{t('section_Contact')}</span></h2>
             <div className="contact">
-                <p tabIndex={0}>Let's connect! I can be reached via my socials or e-mail, feel free to say hi!</p>
+                <p tabIndex={0}>{t('lets_connect')}</p>
                 <div className="contact__items">
                     <a tabIndex={0} target='_blank' rel='noreferrer noopener' href='mailto:can.gologlu@gmail.com'>
                         <div className="contact__item">

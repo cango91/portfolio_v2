@@ -23,5 +23,9 @@
     "about_para3": "Outside of my professional pursuits, I find balance and inspiration through sailing, snowboarding, and bouldering. These activities not only challenge me physically but mentally as well, reflecting my approach to problem-solving in software development. Just like setting a course on open water or finding the next grip on a climb, I approach each project with <1>precision, creativity, and a drive to reach new heights</1>.",
     "download_resume": "Download Resumé",
     "hint_techs": "Hint: Select technologies to filter projects by used technologies",
-    "no_projects": "No projects with the selected filters"
+    "no_projects": "No projects with the selected filters",
+    "description": "Description",
+    "tech-stack": "Tech-stack",
+    "lets_connect": "Let's connect! I can be reached via my socials or e-mail, feel free to say hi!",
+    "made_with_love": "made with ♥️"
 }

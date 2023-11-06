@@ -23,5 +23,9 @@
     "about_para3": "Mesleki uğraşlarımın dışında, yelken, snowboard ve tırmanış yaparak denge ve ilham buluyorum. Bu aktiviteler sadece fiziksel olarak değil, zihinsel olarak da beni zorluyor, yazılım geliştirmedeki sorun çözme yaklaşımımı yansıtıyor. Açık sularda bir rota belirlerken veya tırmanışta bir sonraki tutamağı bulurken olduğu gibi, her projeye <1>hassasiyet, yaratıcılık ve yeni zirvelere ulaşma arzusu</1> ile yaklaşıyorum.",
     "download_resume": "Özgeçmiş İndir",
     "hint_techs": "Aşağıdaki teknolojilere tıklayarak projelerimi kullanılan teknolojilere göre filtreleyebilirsiniz",
-    "no_projects": "Seçili filtrelere uygun proje yok"
+    "no_projects": "Seçili filtrelere uyan proje yok",
+    "description": "Açıklama",
+    "tech-stack": "Teknolojiler",
+    "lets_connect": "İletişime geçmekten çekinmeyin! Bana sosyal medyalarımdan ya da epostamdan ulaşabilirsiniz.",
+    "made_with_love": "♥️ ile yazıldı"
 }

@@ -1,11 +1,13 @@
 import { useEffect, useRef } from 'react';
 import { useTheme } from '../../contexts/ThemeContext';
 import './ProjectCard.css';
+import { useTranslation } from 'react-i18next';
 
 export default function ProjectCard({ technologies, title, description, deploymentLinks, githubLink, imgSrc }) {
     const lastElRef = useRef(null);
     const firstElRef = useRef(null);
     const { theme } = useTheme();
+    const {t} = useTranslation();
     useEffect(() => {
         const onKeyPress = e => {
             // by default, tabbing will set focus to next project card. Let's prevent that and give the user
@@ -53,9 +55,9 @@ export default function ProjectCard({ technologies, title, description, deployme
                 <img tabIndex={0} src={imgSrc} alt={`screenshot of ${title}`} />
             </div>
             <div className="project-card__details">
-                <div tabIndex={0} className="project-card__details__description"><b>Description: </b>{description}</div>
+                <div tabIndex={0} className="project-card__details__description"><b>{t('description')}: </b>{description}</div>
                 <div tabIndex={0} className="project-card__details__techstack">
-                    <b>Tech-stack: </b> {technologies.join(', ')}
+                    <b>{t('tech-stack')}: </b> {technologies.join(', ')}
                 </div>
                 <div className="project-card__footer">
                     <div className="project-card__footer__github-link">
