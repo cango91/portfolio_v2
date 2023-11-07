@@ -34,7 +34,7 @@ export default function About() {
                 </div>
                 <div className="about__links__container">
                     <div className="about__links">
-                        <a tabIndex={0} target='_blank' href="can-gologlu-resume.pdf" className="link">{t('download_resume')}</a>
+                        <a tabIndex={0} target='_blank' href={`can-gologlu-resume-${lang}.pdf`} rel='noreferrer noopener' className="link">{t('download_resume')}</a>
                         <a tabIndex={0} target='_blank' rel='noreferrer noopener' href="https://github.com/cango91" className="link">GitHub</a>
                         <a tabIndex={0} target='_blank' rel='noreferrer noopener' href="https://www.linkedin.com/in/can-gologlu/" className="link">LinkedIn</a>
                     </div>
