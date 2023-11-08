@@ -40,7 +40,7 @@ export const projects = [
     },
     {
         title: 'The Thomas Collective',
-        description: 'A travel app focusing on train travel, done as a group project. Features full-CRUD capabilities, user authentication and e-mail verification',
+        description: 'A travel app focusing on train travel, done as a group project. Features full-CRUD capabilities, user authentication and e-mail verification.',
         technologies: ['Python', 'Django', 'Heroku','HTML5','CSS3','JavaScript'],
         imgSrc: "screenshots/thomas.webp",
         githubLink: [{ title: "GitHub", src: "https://github.com/cango91/thomascollective" }],
@@ -48,7 +48,7 @@ export const projects = [
     },
     {
         title: 'Solitaire (Klondike)',
-        description: 'The classic patience game Klondike as a browser game. Features multiple graphic and animation settings and game modes (not compatible with Firefox)',
+        description: 'The classic patience game Klondike as a browser game. Features multiple graphic and animation settings and game modes.',
         technologies: ["HTML5", "CSS3", "JavaScript"],
         imgSrc: "screenshots/solitaire.webp",
         githubLink: [{ title: "GitHub", src: "https://github.com/cango91/solitaire" }],

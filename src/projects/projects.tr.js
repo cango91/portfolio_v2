@@ -48,7 +48,7 @@ export const projects = [
     },
     {
         title: 'Solitaire (Klondike)',
-        description: 'Tarayıcı oyunu olarak klasik sabır oyunu Klondike. Çeşitli grafik ve animasyon ayarları ile oyun modları sunar (Firefox ile uyumlu değildir).',
+        description: 'Tarayıcı oyunu olarak klasik sabır oyunu Klondike. Çeşitli grafik ve animasyon ayarları ile oyun modları sunar.',
         technologies: ["HTML5", "CSS3", "JavaScript"],
         imgSrc: "screenshots/solitaire.webp",
         githubLink: [{ title: "GitHub", src: "https://github.com/cango91/solitaire" }],
