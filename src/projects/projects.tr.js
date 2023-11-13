@@ -9,7 +9,7 @@ export const projects = [
     },
     {
         title: 'eyeConnect',
-        description: 'Medikal profesyonelleri uzmanlarla bağlayan bir tele-tıp web uygulaması. Veri şifreleme ve AI destekli medikal görüntü sınıflandırma özellikleri içerir.',
+        description: 'Medikal profesyonelleri uzmanlarla bağlayan bir tele-tıp web uygulaması. Veri şifreleme ve AI destekli medikal görüntü sınıflandırma özellikleri içerir. Saha hekimi kullanıcısı için test@field 123456Aa veya uzman hekim hesabı için test@specialist 123456Aa eposta ve şifrelerini kullanarak test edebilirsiniz.',
         technologies: ["MongoDB", "Express", "NodeJS", "JavaScript", "TensorFlow", "OpenCV", "HTML5", "CSS3", "Heroku", "Docker"],
         imgSrc: "screenshots/eyeConnect.webp",
         githubLink: [{ title: 'GitHub', src: "https://github.com/cango91/eye-connect" }],

@@ -9,7 +9,7 @@ export const projects = [
     },
     {
         title: 'eyeConnect',
-        description: 'A tele-medicine web-app for connecting medical professionals with specialists. Features encryption-at-rest and AI-assisted medical image classification.',
+        description: 'A tele-medicine web-app for connecting medical professionals with specialists. Features encryption-at-rest and AI-assisted medical image classification. Test it out as a field HCP with credentials: test@field 123456Aa or as a specialist with credentials: test@specialist 123456Aa',
         technologies: ["MongoDB", "Express", "NodeJS", "JavaScript", "TensorFlow", "OpenCV", "HTML5", "CSS3", "Heroku", "Docker"],
         imgSrc: "screenshots/eyeConnect.webp",
         githubLink: [{ title: 'GitHub', src: "https://github.com/cango91/eye-connect" }],
