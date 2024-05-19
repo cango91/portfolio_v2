@@ -1,6 +1,7 @@
 {
     "aria_name": "Can Göloğlu",
     "job_title": "Full-stack Yazılımcı",
+    "no_deployment": "Demo mevcut değil",
     "aria_switch_to_light": "Aydınlık temaya geç",
     "aria_switch_to_dark": "Karanlık temaya geç",
     "aria_disable_dyslexic_mode": "Disleksi erişilebilirlik modunu kapat",

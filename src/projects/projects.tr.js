@@ -1,5 +1,12 @@
 export const projects = [
     {
+        title: 'Vidyo Özetleyici',
+        description: 'Videoları özetlemek için AI kullanan bir web uygulaması. Kullanıcı dostu bir gradio arayüzü ve video işleme için Apple Silicon\'a özel bir arka uç içerir.',
+        technologies:['Python', 'PyTorch', 'Gradio', 'Transformers'],
+        imgSrc: "screenshots/videoSummarizer.webp",
+        githubLink: [{ title: 'GitHub', src: "https://github.com/cango91/video-summary"}],
+    },
+    {
         title: 'PresenTly',
         description: '"Automate Your Life" hackathonunda 1. sırayı kazanan projemiz, toplamda 6 geliştirici ve 4 UX tasarımcısının geliştirdiği PresenTly, AI destekli bir doğum günü hediye asistanıdır!',
         technologies: ["React", "React Native", "MongoDB", "Express", "NodeJS", "JavaScript", "TypeScript", "AWS", "Jest", "OpenAI API", "Bing Search API", "Heroku", "CSS3"],

@@ -75,7 +75,7 @@ export default function ProjectCard({ technologies, title, description, deployme
                                 </div>
                             ))
                         ) : (
-                            <span tabIndex={0}>Deployment coming soon</span>
+                            <span tabIndex={0}>{t('no_deployment')}</span>
                         )}
                     </div>
                 </div>

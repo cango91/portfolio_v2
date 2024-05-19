@@ -1,6 +1,7 @@
 {
     "aria_name": "John Goeleaulu",
     "job_title": "Full-stack Engineer",
+    "no_deployment": "Deployment not available",
     "aria_switch_to_light": "Switch to light theme",
     "aria_switch_to_dark": "Switch to dark theme",
     "aria_disable_dyslexic_mode": "Disable dyslexia accessibility mode",
